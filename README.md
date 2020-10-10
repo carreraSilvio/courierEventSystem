@@ -1,5 +1,4 @@
-# Rei Event System 
-![alt text](https://github.com/carreraSilvio/reiEventSystem/tree/main/Resources/king-img.png)
+# Rei Event System
 Event System to decouple your unity code
 
 ## Prerequisites
