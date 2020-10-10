@@ -1,2 +1,2 @@
-# Kaiser Event System
+# Rei Event System
 Event System to decouple your unity code
