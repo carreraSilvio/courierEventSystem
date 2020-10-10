@@ -19,7 +19,7 @@ Unity 2018.3 and up
 
 		{
     		"dependencies": {
-        		"com.brightlib.poolsystem": "https://github.com/carreraSilvio/reieventsystem.git"
+        		"com.reievents": "https://github.com/carreraSilvio/reieventsystem.git"
     		}
 		}
 
