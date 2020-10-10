@@ -1,13 +1,17 @@
-﻿using ReiEvents.Runtime;
+﻿using NUnit.Framework;
+using ReiEvents.Runtime;
+using System;
+using UnityEngine;
 
 namespace ReiEvents.Tests.Runtime
 {
-    public class ReiEventSystemTests
+    public class TestInvoke
     {
-        public class TestAddHandler
+        [Test]
+        public void WhenInvokeEventWithNoHandlers_DontThrowAnException()
         {
-            
-
+            //Arrange & Act & Assert
+            Assert.DoesNotThrow(() => ReiEventSystem.Invoke<ReiEvent>(new ReiEvent()));
         }
     }
 }

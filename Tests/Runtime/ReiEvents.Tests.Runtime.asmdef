@@ -1,15 +1,21 @@
 {
     "name": "ReiEvents.Tests.Runtime",
     "references": [
-        "GUID:1c5b2a34936c424489a2d9b1ffc82a56"
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "ReiEvents.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
     "versionDefines": [],
     "noEngineReferences": false
 }
