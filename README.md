@@ -7,7 +7,7 @@ Unity 2018.3 and up
 ## Install
 
 ### Unity 2019.3
-1. Open the package manager and point to the rep url
+1. Open the package manager and point to the repo url
 
 ![Imgur](https://i.imgur.com/iYGgINz.png)
 
@@ -25,5 +25,4 @@ Unity 2018.3 and up
 
 #### Option B
 1. Clone or download the project zip
-2. Inside your project Assets folder create a folder called RPGDatabase
-3. Copy the repo there
+2. Copy the repo inside your project assets folder
