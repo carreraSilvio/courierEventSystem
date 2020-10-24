@@ -1,5 +1,5 @@
 {
-    "name": "ReiEvents.Samples.BasicSample",
+    "name": "CourierEventSystem.Samples.BasicSample",
     "references": [
         "GUID:1c5b2a34936c424489a2d9b1ffc82a56"
     ],

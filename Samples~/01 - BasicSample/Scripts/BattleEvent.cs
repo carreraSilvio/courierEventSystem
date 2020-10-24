@@ -1,8 +1,8 @@
-﻿using ReiEvents.Runtime;
+﻿using CourierEventSystem.Runtime;
 
-namespace ReiEvents.Samples.BasicSample
+namespace CourierEventSystem.Samples.BasicSample
 {
-    public class BattleEvent : ReiEventBase
+    public class BattleEvent : CourierEventBase
     {
         public int id;
     }
