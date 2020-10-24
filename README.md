@@ -19,7 +19,7 @@ Unity 2018.3 and up
 
 		{
     		"dependencies": {
-        		"com.reievents": "https://github.com/carreraSilvio/couriereventsystem.git"
+        		"com.couriereventsystem": "https://github.com/carreraSilvio/couriereventsystem.git"
     		}
 		}
 
