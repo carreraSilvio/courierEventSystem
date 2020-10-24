@@ -1,6 +1,6 @@
-﻿namespace ReiEvents.Runtime
+﻿namespace CourierEventSystem.Runtime
 {
-    public enum ReiEventState
+    public enum CourierEventState
     {
         None = 0,
         Begin = 1,
@@ -8,44 +8,44 @@
         Progress = 3
     }
 
-    public class ReiEvent : ReiEventBase
+    public class CourierEvent : CourierEventBase
     {
         public string name;
-        public ReiEventState state;
+        public CourierEventState state;
 
-        public ReiEvent()
+        public CourierEvent()
         {
 
         }
 
-        public ReiEvent(string name)
+        public CourierEvent(string name)
         {
             this.name = name;
         }
     }
 
-    public class BeginEvent : ReiEvent
+    public class BeginEvent : CourierEvent
     {
         public BeginEvent()
         {
-            state = ReiEventState.Begin;
+            state = CourierEventState.Begin;
         }
         public BeginEvent(string name)
         {
-            state = ReiEventState.Begin;
+            state = CourierEventState.Begin;
             this.name = name;
         }
     }
 
-    public class CompleteEvent : ReiEvent
+    public class CompleteEvent : CourierEvent
     {
         public CompleteEvent()
         {
-            state = ReiEventState.Complete;
+            state = CourierEventState.Complete;
         }
         public CompleteEvent(string name)
         {
-            state = ReiEventState.Complete;
+            state = CourierEventState.Complete;
             this.name = name;
         }
     }

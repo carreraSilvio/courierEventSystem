@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
-using ReiEvents.Runtime;
+using CourierEventSystem.Runtime;
 
-namespace ReiEvents.Tests.Editor
+namespace CourierEventSystem.Tests.Editor
 {
     public class TestInvoke
     {
@@ -9,23 +9,23 @@ namespace ReiEvents.Tests.Editor
         public void WhenInvokeEventWithNoHandlers_DontThrowAnException()
         {
             //Arrange & Act & Assert
-            Assert.DoesNotThrow(() => Rei.Invoke(new ReiEvent()));
+            Assert.DoesNotThrow(() => Courier.Send(new CourierEvent()));
         }
 
         [Test]
         public void WhenInvokeEventWithHandler_CallHandlerMethod()
         {
             bool called = false;
-            void HandlerSample(ReiEventBase reiEvent)
+            void HandlerSample(CourierEventBase reiEvent)
             {
                 called = true;
             }
 
             //Arrange
-            Rei.AddHandler<ReiEvent>(HandlerSample);
+            Courier.Register<CourierEvent>(HandlerSample);
 
             //Act
-            Rei.Invoke(new ReiEvent());
+            Courier.Send(new CourierEvent());
 
             //Assert
             Assert.IsTrue(called);
@@ -36,22 +36,22 @@ namespace ReiEvents.Tests.Editor
         {
             bool calledBegin = false;
             bool calledComplete = false;
-            void HandleBeginEvent(ReiEventBase reiEvent)
+            void HandleBeginEvent(CourierEventBase reiEvent)
             {
                 calledBegin = true;
             }
-            void HandleCompleteEvent(ReiEventBase reiEvent)
+            void HandleCompleteEvent(CourierEventBase reiEvent)
             {
                 calledComplete = true;
             }
 
             //Arrange
-            Rei.AddHandler<BeginEvent>(HandleBeginEvent);
-            Rei.AddHandler<CompleteEvent>(HandleCompleteEvent);
+            Courier.Register<BeginEvent>(HandleBeginEvent);
+            Courier.Register<CompleteEvent>(HandleCompleteEvent);
 
             //Act
-            Rei.Invoke(new BeginEvent());
-            Rei.Invoke(new CompleteEvent());
+            Courier.Send(new BeginEvent());
+            Courier.Send(new CompleteEvent());
 
             //Assert
             Assert.IsTrue(calledBegin && calledComplete);
@@ -61,17 +61,17 @@ namespace ReiEvents.Tests.Editor
         public void WhenAddHandlerTwiceAndInvokeEvent_CallHandlerOnce()
         {
             int calledCount = 0;
-            void HandleEvent(ReiEventBase reiEvent)
+            void HandleEvent(CourierEventBase reiEvent)
             {
                 calledCount++;
             }
 
             //Arrange
-            Rei.AddHandler<ReiEvent>(HandleEvent);
-            Rei.AddHandler<ReiEvent>(HandleEvent);
+            Courier.Register<CourierEvent>(HandleEvent);
+            Courier.Register<CourierEvent>(HandleEvent);
 
             //Act
-            Rei.Invoke<ReiEvent>(new ReiEvent());
+            Courier.Send<CourierEvent>();
 
             //Assert
             Assert.IsTrue(calledCount == 1);

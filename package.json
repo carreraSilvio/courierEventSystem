@@ -1,13 +1,13 @@
 {
-  "name": "com.reievents",
+  "name": "com.couriereventsystem",
   "version": "1.0.0",
-  "displayName": "Rei Event System",
+  "displayName": "Courier Event System",
   "description": "Event System to decouple your unity code.",
   "unity": "2018.2",
   "unityRelease": "15f1",
   "author": 
   {
     "name": "Silvio Carréra",
-    "url": "https://github.com/carreraSilvio/ReiEventSystem"
+    "url": "https://github.com/carreraSilvio/CourierEventSystem"
   }
 }

@@ -1,4 +1,4 @@
-# Rei Event System
+# Courier Event System
 Event System to decouple your unity code
 
 ## Prerequisites
@@ -19,7 +19,7 @@ Unity 2018.3 and up
 
 		{
     		"dependencies": {
-        		"com.reievents": "https://github.com/carreraSilvio/reieventsystem.git"
+        		"com.reievents": "https://github.com/carreraSilvio/couriereventsystem.git"
     		}
 		}
 

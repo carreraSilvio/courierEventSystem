@@ -1,11 +1,13 @@
 {
-    "name": "ReiEvents.Tests.Runtime",
+    "name": "CourierEventSystem.Tests.Editor",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "ReiEvents.Runtime"
+        "CourierEventSystem.Runtime"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
