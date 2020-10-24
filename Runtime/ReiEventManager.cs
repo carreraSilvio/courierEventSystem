@@ -18,12 +18,17 @@ namespace ReiEvents.Runtime
         {
             if (_eventDictionary.TryGetValue(typeof(T), out List<ReiEventHandler> handlerList))
             {
-                handlerList.Add(handler);
+                if (!handlerList.Contains(handler))
+                {
+                    handlerList.Add(handler);
+                }
             }
             else
             {
-                List<ReiEventHandler> newHandlerList = new List<ReiEventHandler>();
-                newHandlerList.Add(handler);
+                List<ReiEventHandler> newHandlerList = new List<ReiEventHandler>
+                {
+                    handler
+                };
                 _eventDictionary.Add(typeof(T), newHandlerList);
             }
         }

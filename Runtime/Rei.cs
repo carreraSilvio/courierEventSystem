@@ -1,10 +1,10 @@
 ﻿namespace ReiEvents.Runtime
 {
-    public sealed class ReiEventSystem
+    public sealed class Rei
     {
         private static ReiEventManager _instance;
 
-        private ReiEventSystem()
+        private Rei()
         {
         }
 
@@ -33,6 +33,11 @@
         public static void Invoke<T>(T evt) where T : ReiEventBase
         {
             Instance.Invoke(evt);
+        }
+
+        public static void Invoke<T>() where T : ReiEventBase, new()
+        {
+            Instance.Invoke(new T());
         }
 
     }
